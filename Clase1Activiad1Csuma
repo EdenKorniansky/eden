@@ -1,0 +1,28 @@
+public static int suma(int n) {
+   if (n == 1) {
+       return 1;
+   } else {
+       return n + suma(n - 1);
+   }
+}
+
+
+public static void main(String[] args) {
+   int n = 5; // Cambia este valor para probar con otros números
+   System.out.println("La suma de los primeros " + n + " números enteros es: " + suma(n));
+}
+/* 
+Análisis Recursivo:
+
+Caso Base → n==1
+
+Recursión
+T(n) = T(n-1) + O(1)
+T(n) = T(n-2) + O(1) + O(1)
+T(n) = T(n-3) + O(1) + O(1) + O(1)
+.
+.
+.
+T(n)  = T(n-n) + n . O(1)
+
+T(n) = O(n)
